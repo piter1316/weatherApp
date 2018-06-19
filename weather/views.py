@@ -9,6 +9,7 @@ def index(request):
     if request.method == 'POST':
         form = CityForm(request.POST)
         form.save()
+        form.clean()
 
 
     form = CityForm()
